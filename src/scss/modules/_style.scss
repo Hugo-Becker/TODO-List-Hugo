@@ -1,6 +1,18 @@
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    // font-size: 2rem;
+    background: linear-gradient(to right, rgb(113, 113, 238), rgb(214, 124, 241) );
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-size: 2rem;
+}
+
+
+.todo-input{
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.5rem;
 
 }
 
@@ -9,5 +21,65 @@ body{
 .add-todo{
     border: none;
     outline: none;
+    background: none;
+    margin-left: 25px;
+
+
+    i{
+        color: white;
+        font-size: 3rem;
+    }
+
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+}
+
+.todo-list{
+    list-style-type: none;
+    margin-top: 10vh;
+    width: 40vw;
+
+
+}
+
+
+
+// JS
+.todo-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    li{
+        flex: 9;
+        background-color: white;
+        padding: 1px;
+        border-radius: 5px;
+
+    }
+
+    .todo-check , .todo-edit, .todo-delete {
+        border: none;
+        background: none;
+        outline: none;
+        flex: 1;
+        padding: 2px 0px;
+        i{
+            color: white;
+            font-size: 1.5rem;
+
+        }
+    }
+
+    
+
+}
+
+.fa-trash-alt,.fa-edit,.fa-check-circle{
+    pointer-events: none;
 }
 
