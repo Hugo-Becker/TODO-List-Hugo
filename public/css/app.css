@@ -7,11 +7,38 @@ body {
   font-size: 2rem;
 }
 
+.sort-div {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.sort-div button {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin: 5px;
+  background: white;
+  color: #7171ee;
+}
+
+.sort-div button:focus {
+  outline: none;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
 .todo-input {
   border: none;
   border-radius: 5px;
   outline: none;
   font-size: 1.5rem;
+}
+
+.add-todo:focus {
+  outline: none;
 }
 
 .add-todo {
@@ -42,13 +69,16 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  transition: all 0.5s ease;
 }
 
-.todo-div li {
+.todo-div li, .todo-div .edit-input {
   flex: 9;
   background-color: white;
   padding: 1px;
   border-radius: 5px;
+  outline: none;
+  border: none;
 }
 
 .todo-div .todo-check, .todo-div .todo-edit, .todo-div .todo-delete {
@@ -66,6 +96,15 @@ body {
 
 .fa-trash-alt, .fa-edit, .fa-check-circle {
   pointer-events: none;
+}
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.muted {
+  display: none;
 }
 
 /*!

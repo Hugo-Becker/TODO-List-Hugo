@@ -7,6 +7,28 @@ body{
     font-size: 2rem;
 }
 
+.sort-div{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    button{
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        margin: 5px;
+        background:white;
+        color:  rgb(113, 113, 238);
+    }
+    button:focus{
+        outline: none;
+    }
+}
+
+button:hover{
+    opacity: 0.5;
+
+}
+
 
 .todo-input{
     border: none;
@@ -16,7 +38,9 @@ body{
 
 }
 
-
+.add-todo:focus{
+    outline: none;
+}
 
 .add-todo{
     border: none;
@@ -53,12 +77,15 @@ body{
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    transition: all 0.5s ease;
 
-    li{
+    li,.edit-input{
         flex: 9;
         background-color: white;
         padding: 1px;
         border-radius: 5px;
+        outline: none;
+        border: none;
 
     }
 
@@ -79,7 +106,21 @@ body{
 
 }
 
+
+// prevent fro clicking on the icons
 .fa-trash-alt,.fa-edit,.fa-check-circle{
     pointer-events: none;
 }
 
+.checked{
+    text-decoration: line-through;
+    opacity: 0.5;
+
+}
+
+
+
+.muted{
+    display: none;
+
+}
